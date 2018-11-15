@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+  <head>
+    <meta charset="utf-8" />
+  </head>
+  <body style="height: 100%; margin: 0">
+    <div id="container" style="height: 100%"></div>
+    <script
+      type="text/javascript"
+      src="https://img.hcharts.cn/highcharts/highcharts.js"
+    ></script>
+    <script src="./series.js"></script>
+    <script type="text/javascript">
+      var dom = document.getElementById("container");
+      var app = {};
+      option = null;
+
+      option = {
+        xAxis: {},
+        yAxis: {},
+        animation: false
+      };
+
+      Highcharts.chart("container", {
+        xAxis: {},
+        title: {
+          text: ""
+        },
+        legend: {
+          enabled: false
+        },
+        plotOptions: {
+          series: {
+            // animation: false
+            animation: {
+              // duration: 4000
+            }
+          }
+        },
+        series: series
+      });
+    </script>
+  </body>
+</html>
